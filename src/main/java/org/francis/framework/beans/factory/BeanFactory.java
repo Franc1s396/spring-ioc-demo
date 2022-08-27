@@ -6,8 +6,8 @@ package org.francis.framework.beans.factory;
  * @apiNote
  */
 public interface BeanFactory {
-    Object getBean(String beanName);
+    Object getBean(String beanName) throws ClassNotFoundException, IllegalAccessException, InstantiationException, Exception;
 
-    <T> T getBean(String name,Class<? extends T> requiredType);
+    <T> T getBean(String name,Class<? extends T> requiredType) throws Exception;
 
 }

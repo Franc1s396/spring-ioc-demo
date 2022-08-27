@@ -39,7 +39,7 @@ public abstract class AbstractApplicationContext implements ApplicationContext {
     /**
      * Bean初始化
      */
-    private void finishInitialization() {
+    private void finishInitialization() throws Exception {
         //获取注册表
         BeanDefinitionRegistry beanDefinitionRegistry = beanDefinitionReader.getRegistry();
         //获取BeanDefinition对象
